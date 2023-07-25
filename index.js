@@ -14,10 +14,11 @@ console.log(intervalToDuration({
 
 // => { years: 39, months: 2, days: 20, hours: 7, minutes: 5, seconds: 0 }
 
-
+//Function to calculate distance between Date and birthday
 form.addEventListener('submit', function(e){
   e.preventDefault()
   console.log('submitted')
+  //Date Fns interval to duration function
   console.log(intervalToDuration({
     start: new Date(formYear.value, formMonth.value, formDay.value, 12, 0, 0),
     end: new Date()
