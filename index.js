@@ -12,31 +12,40 @@ let monthsResults = document.getElementById('months_results');
 let daysResults = document.getElementById('days_results');
 let formInput = document.querySelectorAll('.form_input')
 let formResults = document.querySelectorAll('.form_results')
+let errorMsg = document.querySelectorAll('.error_msg')
+let dayErrorMsg = document.getElementById('day_error_msg');
+let monthErrorMsg = document.getElementById('month_error_msg');
+let yearErrorMsg = document.getElementById('year_error_msg');
+
 // Get the duration between January 15, 1929 and April 4, 1968.
 console.log(intervalToDuration({
   start: new Date(1929, 0, 15, 12, 0, 0),
   end: new Date(1968, 3, 4, 19, 5, 0)
 }))
 
+function noResults(){
+  yearsResults.innerHTML= "--years";
+  monthsResults.innerHTML= "--months";
+  daysResults.innerHTML="--days";
+}
 
 function invalidInput(){
   if(formYear.value === "" || formMonth.value === "" || formDay.value ===""){
-    for(let i = 0; i < formResults.length; i++){
-      formResults[i].innerHTML= "--";
-      formResults[i].style.color= "red"
+    dayErrorMsg.innerHTML="Must be a valid day";
+    monthErrorMsg.innerHTML="Must be a valid month"
+    yearErrorMsg.innerHTML="Must be a valid year"
+    noResults()
     }
-
+    
   
   }
   if(formMonth.value > 12 || formMonth.value < 1){
-    monthsResults.style.color="red";
-    monthsResults.innerHTML="--"
+  
   }
  if(formDay.value < 1 || formDay.value > 31){
-    daysResults.style.color="red";
-    daysResults.innerHTML="--"
+    
   }
-}
+
 
 // => { years: 39, months: 2, days: 20, hours: 7, minutes: 5, seconds: 0 }
 //Function to calculate distance between Date and birthday
@@ -55,6 +64,7 @@ form.addEventListener('submit', function(e){
   monthsResults.innerHTML=results.months + " months";
   daysResults.innerHTML=results.days + " days";
   invalidInput()
+  form.reset()
 
 })
 
