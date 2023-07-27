@@ -1,20 +1,32 @@
+#form{
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+}
+#form label{
+  color: hsl(0, 1%, 44%);
+
+}
 .user_input{
   display: flex;
   justify-content: center;
   gap: 20px;
   padding-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .form_input{
   padding: 20px 10px;
   border-radius: 10px;
   border-color:hsl(0, 0%, 86%);
+  font-family: 'Poppins', sans-serif;
+  font-style: none; 
+
 }
 
 .form_input_container{
   display: flex;
   flex-direction: column;
   gap: 10px;
+
 }
 
 .results_container{
@@ -22,22 +34,32 @@
   flex-direction: column;
   margin-left: 5rem;
 }
-
+.submit_container{
+  display: flex;
+  justify-content: flex-end;
+}
 .results_container p{
-  font-size: 40px;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 .results_container span{
   
   color: hsl(259, 100%, 65%);
 }
-.border_bottom{
-  margin: 10px 50px;
-;
 
-}
+
 svg{
   background-color: hsl(259, 100%, 65%);
   border-radius: 50px;
 
 
+}
+
+button{
+  border: none;
+  background-color: white;
+  transform: translateY(20px);
+ 
 }
