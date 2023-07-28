@@ -26,7 +26,7 @@ border-radius: 10px 10px 140px 10px;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -54,6 +54,7 @@ border-radius: 10px 10px 140px 10px;
 .submit_container{
   display: flex;
   justify-content: flex-end;
+  transform:translateY(-55px);
 }
 .results_container p{
   font-size: 70px;
@@ -80,7 +81,58 @@ svg{
 button{
   border: none;
   background-color: white;
-  transform: translateY(20px);
-  padding: 15px;
  
+}
+@media(max-width: 1000px){
+  .form_input{
+    width: 120px;
+  }
+}
+@media(max-width: 767px){
+  #form{
+    height: 225px;
+  }
+  .results_container p{
+    font-size: 40px;
+  }
+  .user_input{
+    justify-content: center;
+    padding: 2rem 0 0 0;
+  }
+  .submit_container{
+    justify-content: center;
+  }
+  .form_input{
+    width: 75px;
+  }
+  button{
+    transform: translateY(0);
+
+  }
+  label{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 500px){
+  .results_container p{
+    font-size: 22px;
+  }
+  .form_input{
+    width: 50px;
+  }
+  .results_container{
+    margin-left: 1rem;
+  }
+  svg{
+    padding: 10px;
+  }
+}
+
+@media(max-width: 400px){
+  
+  .form_input{
+    width: 40px;
+  }
+  
 }
