@@ -60,9 +60,9 @@ form.addEventListener('submit', function(e){
     end: new Date()
   })
   console.log(results)
-  yearsResults.innerHTML=results.years + " years";
-  monthsResults.innerHTML=results.months + " months";
-  daysResults.innerHTML=results.days + " days";
+  yearsResults.innerHTML=`<span>${results.years}</span>` + ` years`;
+  monthsResults.innerHTML=`<span>${results.months}</span>` + ` months`;
+  daysResults.innerHTML=`<span>${results.days}</span>` + ` days`;
   invalidInput()
   form.reset()
 
